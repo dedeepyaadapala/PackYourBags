@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Register</title>
+    <link rel="stylesheet" href="logincss.css">
+</head>
+<body>
+
+
+    <div class="header">
+        <div>
+            <h1> <span style="color: #ea3187;">Pack Your Bags!</span></h1>
+            <p>your travel companion wherever you go...</p>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <div class="navbar-container">
+            <center> <a href="index.html" class="navbar-logo">Pack Your Bags - Travel anywhere with confidence</a></center>
+        </div>
+    </div>
+    
+    <div class="login-container">
+        <!-- Login Section -->
+        <div class="form-section" id="login-section">
+            <h2>Login</h2>
+            <form action="dashboard.html" method="POST">
+                <input type="email" class="input-field" placeholder="Enter your email" required>
+                <input type="password" class="input-field" placeholder="Enter your password" required>
+                <center><a href="forgot-password.html" class="forgot-password">Forgot Password?</a></center>
+                <button type="submit" class="button">Login</button>
+            </form>
+            <p class="switch-form" onclick="toggleForm('register')">Don't have an account? <span>Create one</span></p>
+        </div>
+
+        <!-- Register Section -->
+        <div class="form-section" id="register-section" style="display: none;">
+            <h2>Register</h2>
+            <form action="dashboard.html" method="POST">
+                <input type="text" class="input-field" placeholder="Enter your name" required>
+                <input type="email" class="input-field" placeholder="Enter your email" required>
+                <input type="password" class="input-field" placeholder="Create a password" required>
+                <input type="password" class="input-field" placeholder="Confirm your password" required>
+                <button type="submit" class="button">Register</button>
+            </form>
+            <p class="switch-form" onclick="toggleForm('login')">Already have an account? <span>Login</span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

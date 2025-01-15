@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .button {
+    padding: 10px 20px;
+    background-color: #f166a7;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #e0517b;
+}
+
+.navbar {
+    background-color: #f166a7;
+    color: white;
+    padding: 20px;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-left:50px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar-links {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-links li {
+    display: inline;
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar-links a:hover {
+    color: #000;
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="#" class="navbar-logo">Pack Your Bags!</a>
+        <ul class="navbar-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="logout.html">Logout</a></li>
+        </ul>
+    </div>
+
+    <div class="change-pwd">
+        <h3>Change Password</h3>
+
+        <label for="oldPassword">Old Password:</label>
+        <input type="password" id="oldPassword" class="input-field" placeholder="Enter your old password" required>
+
+        <label for="newPassword">New Password:</label>
+        <input type="password" id="newPassword" class="input-field" placeholder="Enter a new password" required>
+
+        <label for="confirmPassword">Confirm New Password:</label>
+        <input type="password" id="confirmPassword" class="input-field" placeholder="Confirm your new password" required>
+
+        <!-- Password Match Error -->
+        <p id="passwordError" class="error-message" style="display: none;">Passwords do not match!</p>
+    </div>
+</body>
+</html>
