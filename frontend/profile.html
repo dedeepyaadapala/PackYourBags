@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">Pack Your Bags!</a>
+            <ul class="navbar-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="logout.html">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Profile Page Content -->
+    <div class="profile-container">
+        <div class="profile-header">
+            <div class="profile-picture">
+                <img src="profile-pic.jpg" alt="Profile Picture">
+            </div>
+            <div class="profile-info">
+                <h2>Alice</h2>
+                <p>Email: alice.dummy@gmail.com</p>
+                <p>Bio: A passionate traveler, always ready for the next adventure!</p>
+                <button class="edit-button" onclick = "toggleEditProfile()">Edit Profile</button>
+                <div class="change-password">
+                    <button type="button" class="change-password-button" id="changePasswordButton" >Change Password</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Edit Profile Form -->
+        <div class="edit-profile" id="editProfile" style="display: none;">
+            <h2>Edit Profile</h2>
+            
+            <form id="editForm" onsubmit="saveProfileChanges(event)">
+                <input type="text" id="editName" class="input-field" placeholder="Enter your name" required>
+                <input type="email" id="editEmail" class="input-field" placeholder="Enter your email" required>
+                <label for="editBio">Bio:</label>
+                <textarea id="editBio" class="input-field" placeholder="Enter your bio (max 200 characters)" rows="5">This is a short bio about John Doe.</textarea>
+                <button type="submit" class="button">Save Changes</button>
+            </form>
+            <button class="cancel-button" onclick="toggleEditProfile()">Cancel</button>
+        </div>
+        
+    </div>
+
+    <script src="profile.js"></script>
+
+</body>
+</html>

@@ -43,6 +43,8 @@ body {
 .navbar-logo {
     font-size: 1.8rem;
     color: #fff;
+    text-align: center;
+    margin-left:250px;
     font-weight: bold;
     text-decoration: none;
 }
